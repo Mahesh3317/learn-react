@@ -1,3 +1,16 @@
+// HMR - Hot Module Reloading
+// File Watchr algorithm
+// Bunling
+// MINIFY
+// Cleaning our Code
+// Dev abd Production Build
+// super fast build algorithm
+// image Optimization
+// Caching while development
+// HTTPS on dev
+// Compression
+// Compatble
+//created a server
 
 // //  <div class="header">
 // //  <h1>Namaste React</h1>
