@@ -59,37 +59,71 @@ const HeaderComponent = () =>{
 //     }
 // ]
 
-const burger={
+
+
+const restaurantList=[
+    {
     name: "Burger King",
     image:"https://img.freepik.com/premium-photo/burger-fries_1156651-705.jpg?semt=ais_hybrid",
     cusines: ["rajasthani","punjabi"],
     rating : 4.6
-};
+    },
+    {
+        name: "KFC",
+        image:"https://img.freepik.com/free-photo/red-lentil-soup-with-slice-lemon-breadcrumbs_140725-1001.jpg?t=st=1742869397~exp=1742872997~hmac=a2bdeac13ce9fc73b864245365e3e2b4d838005686260cc09a056ac1031f1645&w=740",
+        cusines: ["rajasthani","punjabi"],
+        rating : 4.6
+    },
+    {
+        name: "La pi no",
+        image:"https://img.freepik.com/free-photo/red-lentil-soup-with-slice-lemon-breadcrumbs_140725-1001.jpg?t=st=1742869397~exp=1742872997~hmac=a2bdeac13ce9fc73b864245365e3e2b4d838005686260cc09a056ac1031f1645&w=740",
+        cusines: ["rajasthani","punjabi"],
+        rating : 4.6
+    }
+    
+];
+// const Restaurantcard = (props) =>{
+//     console.log(props);
+    
+//     return(
+//          <div className="card">
+//             <img src={props.restaurantList.data?.image}/>
+//             <h2>{props.restaurantList.data?.name}</h2>
+//             <h3>{props.restaurantList.data?.cusines.join(",")}</h3>
+//             <h4>{props.restaurantList.data?.rating}</h4>
+             
+//          </div>
+//     )
+// };
 
-const Restaurantcard = () =>{
+//destructure
+const Restaurantcard = ({ restaurant}) =>{
+    
+   
+    
     return(
          <div className="card">
-            <img src={burger.image}/>
-            <h2>{burger.name};</h2>
-            <h3>{burger.cusines.join(",")}</h3>
-            <h4>{burger.rating}</h4>
+            <img src={restaurant.data?.image}/>
+            <h2>{restaurant.data?.name}</h2>
+            <h3>{restaurant.data?.cusines.join(",")}</h3>
+            <h4>{restaurant.data?.rating}</h4>
              
          </div>
     )
 };
 
+//Optional chaining
 
+//props - properties
 const Body = () =>{
     return (
         <div className="restaurant-list">
-            <Restaurantcard/>
-            <Restaurantcard/>
-            <Restaurantcard/>
-            <Restaurantcard/> 
-            <Restaurantcard/>
-            <Restaurantcard/>
-            <Restaurantcard/>
-            <Restaurantcard/>
+            {/* {Restaurantcard(restaurantList[0])} */}
+
+            <Restaurantcard restaurant = {restaurantList[0]}/>
+            <Restaurantcard restaurant = {restaurantList[1]}/>
+            <Restaurantcard restaurant = {restaurantList[2]}/>
+            
         </div>
     )
     
