@@ -2953,6 +2953,8 @@ var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _logoJpg = require("./images/logo.jpg");
 var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
+var _foodJpeg = require("./images/food.jpeg");
+var _foodJpegDefault = parcelHelpers.interopDefault(_foodJpeg);
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
         className: "logo",
         alt: "logo",
@@ -3055,7 +3057,7 @@ _c1 = HeaderComponent;
 const restaurantList = [
     {
         name: "Burger King",
-        image: "https://img.freepik.com/premium-photo/burger-fries_1156651-705.jpg?semt=ais_hybrid",
+        image: "https://img.freepik.com/free-photo/red-lentil-soup-with-slice-lemon-breadcrumbs_140725-1001.jpg?t=st=1742869397~exp=1742872997~hmac=a2bdeac13ce9fc73b864245365e3e2b4d838005686260cc09a056ac1031f1645&w=740",
         cusines: [
             "rajasthani",
             "punjabi"
@@ -3081,6 +3083,7 @@ const restaurantList = [
         rating: 4.6
     }
 ];
+//first
 // const Restaurantcard = (props) =>{
 //     console.log(props);
 //     return(
@@ -3092,43 +3095,55 @@ const restaurantList = [
 //          </div>
 //     )
 // };
-//destructure
-const Restaurantcard = ({ restaurant })=>{
+//Second
+// const Restaurantcard = ({ restaurant}) =>{
+//     return(
+//          <div className="card">
+//             <img src={restaurant.data?.image}/>
+//             <h2>{restaurant.data?.name}</h2>
+//             <h3>{restaurant.data?.cusines.join(",")}</h3>
+//             <h4>{restaurant.data?.rating}</h4>
+//          </div>
+//     )
+// };
+//Third
+const Restaurantcard = ({ image, name, cusines, rating })=>{
+    //    const {image,name,cusines,rating}=restaurant;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: restaurant.data?.image
+                src: image
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 106,
+                lineNumber: 123,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: restaurant.data?.name
+                children: name
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 107,
+                lineNumber: 124,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: restaurant.data?.cusines.join(",")
+                children: cusines.join(",")
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 108,
+                lineNumber: 125,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: restaurant.data?.rating
+                children: rating
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 109,
+                lineNumber: 126,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App3.js",
-        lineNumber: 105,
+        lineNumber: 122,
         columnNumber: 10
     }, undefined);
 };
@@ -3143,27 +3158,27 @@ const Body = ()=>{
                 restaurant: restaurantList[0]
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 123,
+                lineNumber: 140,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Restaurantcard, {
                 restaurant: restaurantList[1]
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 124,
+                lineNumber: 141,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Restaurantcard, {
                 restaurant: restaurantList[2]
             }, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 125,
+                lineNumber: 142,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App3.js",
-        lineNumber: 120,
+        lineNumber: 137,
         columnNumber: 9
     }, undefined);
 };
@@ -3173,7 +3188,7 @@ const Footer = ()=>{
         children: "Body"
     }, void 0, false, {
         fileName: "App3.js",
-        lineNumber: 133,
+        lineNumber: 150,
         columnNumber: 12
     }, undefined);
 };
@@ -3183,23 +3198,23 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 139,
+                lineNumber: 156,
                 columnNumber: 11
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 140,
+                lineNumber: 157,
                 columnNumber: 11
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App3.js",
-                lineNumber: 141,
+                lineNumber: 158,
                 columnNumber: 11
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App3.js",
-        lineNumber: 138,
+        lineNumber: 155,
         columnNumber: 9
     }, undefined);
 };
@@ -3207,7 +3222,7 @@ _c5 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App3.js",
-    lineNumber: 148,
+    lineNumber: 165,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4, _c5;
@@ -3223,7 +3238,7 @@ $RefreshReg$(_c5, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./images/logo.jpg":"dtZ1C","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./images/logo.jpg":"dtZ1C","./images/food.jpeg":"9L7Df","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -18856,7 +18871,10 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"gkKU3":[function(require,module,exports,__globalThis) {
+},{}],"9L7Df":[function(require,module,exports,__globalThis) {
+module.exports = require("c03b481cb3cd9a0").getBundleURL('cyvum') + "food.aeb712dd.jpeg" + "?" + Date.now();
+
+},{"c03b481cb3cd9a0":"lgJ39"}],"gkKU3":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
